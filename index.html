@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+settings {
+display: flex;
+position: fixed;
+z-index: 1;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: rgba(0,0,0,0);
+}
+modal {
+background-color: #fefefe;
+border-radius: 3px;
+background-color: #f0f0ff;
+padding: 20px;
+border: 4px double #101010;
+width: 20%;
+height: 100%;
+box-shadow: 0 0 5px 3px #afafaf;
+}
+#theme {
+border: 0px solid #000000;
+border-radius: 7px;
+background-color: rgba(0,0,0,0);
+border: 1px solid #000000;
+}
+#theme:hover {
+transition: background-color 0.5s ease-out;
+border: 1px solid #000000;
+border-radius: 7px;
+background-color: rgba(0,0,0,0.15);
+}
+</style>
+</head>
+<body>
+<settings>
+<modal>
+<font size="6">Test of Pallete</font><br><br>
+<font size="5" color="#404040">Pallete: <input type="color" id="theme"></input></font>
+</modal>
+</settings>
+</body>
+</html>
+<script>
+setInterval(function() {
+document.querySelector("body").setAttribute("bgcolor", document.getElementById("theme").value);
+}, 1);
+</script>
